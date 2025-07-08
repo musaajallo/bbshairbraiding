@@ -58,7 +58,7 @@ export default function Navigation() {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 hover:bg-gray-100 dark:hover:bg-gray-800 p-2 rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 dark:focus:ring-purple-400"
               aria-label="Toggle navigation menu"
-              aria-expanded={isMenuOpen}
+              aria-expanded={isMenuOpen ? "true" : "false"}
             >
               <svg
                 className="h-6 w-6"

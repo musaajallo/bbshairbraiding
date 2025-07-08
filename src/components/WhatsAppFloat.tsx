@@ -19,7 +19,7 @@ export default function WhatsAppFloat() {
           onClick={handleWhatsAppClick}
           onMouseEnter={() => setIsVisible(true)}
           onMouseLeave={() => setIsVisible(false)}
-          className="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-4 focus:ring-green-300"
+          className="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-4 focus:ring-green-300 dark:focus:ring-green-500/50"
           aria-label="Contact us on WhatsApp"
         >
           <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -29,9 +29,9 @@ export default function WhatsAppFloat() {
         
         {/* Tooltip */}
         {isVisible && (
-          <div className="absolute bottom-full right-0 mb-2 bg-gray-900 text-white text-sm rounded-lg py-2 px-3 whitespace-nowrap">
+          <div className="absolute bottom-full right-0 mb-2 bg-gray-900 dark:bg-gray-700 text-white text-sm rounded-lg py-2 px-3 whitespace-nowrap shadow-lg">
             Chat with us on WhatsApp
-            <div className="absolute top-full right-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-gray-900"></div>
+            <div className="absolute top-full right-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-gray-900 dark:border-t-gray-700"></div>
           </div>
         )}
       </div>

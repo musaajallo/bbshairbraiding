@@ -2,12 +2,12 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-12 mt-20">
+    <footer className="bg-gray-900 dark:bg-gray-950 text-white py-12 mt-20 border-t border-gray-700 dark:border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-2xl font-bold text-purple-400 mb-4">BBS Hair Braiding</h3>
-            <p className="text-gray-300 mb-4">Creating beautiful, protective hairstyles with care and expertise.</p>
+            <h3 className="text-2xl font-bold text-purple-400 dark:text-purple-300 mb-4">BBS Hair Braiding</h3>
+            <p className="text-gray-300 dark:text-gray-400 mb-4">Creating beautiful, protective hairstyles with care and expertise.</p>
             
             {/* Social Media Links */}
             <div className="flex space-x-4">
@@ -50,11 +50,11 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              <li><Link href="/services" className="text-gray-300 hover:text-purple-400 transition-colors">Services</Link></li>
-              <li><Link href="/booking" className="text-gray-300 hover:text-purple-400 transition-colors">Book Appointment</Link></li>
-              <li><Link href="/gallery" className="text-gray-300 hover:text-purple-400 transition-colors">Gallery</Link></li>
-              <li><Link href="/about" className="text-gray-300 hover:text-purple-400 transition-colors">About</Link></li>
-              <li><Link href="/contact" className="text-gray-300 hover:text-purple-400 transition-colors">Contact</Link></li>
+              <li><Link href="/services" className="text-gray-300 dark:text-gray-400 hover:text-purple-400 dark:hover:text-purple-300 transition-colors">Services</Link></li>
+              <li><Link href="/booking" className="text-gray-300 dark:text-gray-400 hover:text-purple-400 dark:hover:text-purple-300 transition-colors">Book Appointment</Link></li>
+              <li><Link href="/gallery" className="text-gray-300 dark:text-gray-400 hover:text-purple-400 dark:hover:text-purple-300 transition-colors">Gallery</Link></li>
+              <li><Link href="/about" className="text-gray-300 dark:text-gray-400 hover:text-purple-400 dark:hover:text-purple-300 transition-colors">About</Link></li>
+              <li><Link href="/contact" className="text-gray-300 dark:text-gray-400 hover:text-purple-400 dark:hover:text-purple-300 transition-colors">Contact</Link></li>
             </ul>
           </div>
           
@@ -98,10 +98,10 @@ export default function Footer() {
                 <input 
                   type="email" 
                   placeholder="Your email"
-                  className="flex-1 px-3 py-2 bg-gray-800 text-white border border-gray-700 rounded-l-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-sm"
+                  className="flex-1 px-3 py-2 bg-gray-800 dark:bg-gray-900 text-white border border-gray-700 dark:border-gray-600 rounded-l-md focus:outline-none focus:ring-2 focus:ring-purple-500 dark:focus:ring-purple-400 text-sm"
                 />
                 <button 
-                  className="bg-purple-600 text-white px-4 py-2 rounded-r-md hover:bg-purple-700 transition-colors"
+                  className="bg-purple-600 dark:bg-purple-700 text-white px-4 py-2 rounded-r-md hover:bg-purple-700 dark:hover:bg-purple-600 transition-colors"
                   aria-label="Subscribe to newsletter"
                 >
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

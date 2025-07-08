@@ -63,16 +63,16 @@ export default function Services() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-50 to-purple-50">
+    <div className="min-h-screen bg-gradient-to-br from-pink-50 to-purple-50 dark:from-gray-900 dark:to-gray-800 transition-colors">
       <Navigation />
 
       {/* Services Header */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Our <span className="text-purple-600">Services</span>
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+            Our <span className="text-purple-600 dark:text-purple-400">Services</span>
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             Expert hair braiding services tailored to your style and needs. 
             All services include consultation and styling tips for maintenance.
           </p>
@@ -81,16 +81,16 @@ export default function Services() {
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {services.map((service, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+            <div key={index} className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-gray-100 dark:border-gray-700">
               <div className="p-6">
                 <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-xl font-bold text-gray-900">{service.name}</h3>
-                  <span className="text-lg font-semibold text-purple-600">{service.price}</span>
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white">{service.name}</h3>
+                  <span className="text-lg font-semibold text-purple-600 dark:text-purple-400">{service.price}</span>
                 </div>
                 
-                <p className="text-gray-600 mb-4">{service.description}</p>
+                <p className="text-gray-600 dark:text-gray-300 mb-4">{service.description}</p>
                 
-                <div className="flex items-center text-sm text-gray-500 mb-4">
+                <div className="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-4">
                   <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
@@ -99,8 +99,8 @@ export default function Services() {
 
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                      <svg className="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-600 dark:text-gray-300">
+                      <svg className="w-4 h-4 mr-2 text-green-500 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                       {feature}
@@ -120,75 +120,75 @@ export default function Services() {
         </div>
 
         {/* Process Section */}
-        <div className="bg-white rounded-lg shadow-lg p-8 mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">Our Process</h2>
+        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 mb-16 border border-gray-100 dark:border-gray-700 transition-colors">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white text-center mb-8">Our Process</h2>
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-purple-600">1</span>
+              <div className="w-16 h-16 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-purple-600 dark:text-purple-400">1</span>
               </div>
-              <h3 className="text-lg font-semibold mb-2 text-gray-900">Consultation</h3>
-              <p className="text-gray-600 text-sm">We discuss your hair goals, lifestyle, and preferred style</p>
+              <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-white">Consultation</h3>
+              <p className="text-gray-600 dark:text-gray-300 text-sm">We discuss your hair goals, lifestyle, and preferred style</p>
             </div>
             
             <div className="text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-purple-600">2</span>
+              <div className="w-16 h-16 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-purple-600 dark:text-purple-400">2</span>
               </div>
-              <h3 className="text-lg font-semibold mb-2 text-gray-900">Preparation</h3>
-              <p className="text-gray-600 text-sm">Hair washing, conditioning, and sectioning for optimal results</p>
+              <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-white">Preparation</h3>
+              <p className="text-gray-600 dark:text-gray-300 text-sm">Hair washing, conditioning, and sectioning for optimal results</p>
             </div>
             
             <div className="text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-purple-600">3</span>
+              <div className="w-16 h-16 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-purple-600 dark:text-purple-400">3</span>
               </div>
-              <h3 className="text-lg font-semibold mb-2 text-gray-900">Braiding</h3>
-              <p className="text-gray-600 text-sm">Expert braiding using professional techniques and quality products</p>
+              <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-white">Braiding</h3>
+              <p className="text-gray-600 dark:text-gray-300 text-sm">Expert braiding using professional techniques and quality products</p>
             </div>
             
             <div className="text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-purple-600">4</span>
+              <div className="w-16 h-16 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-purple-600 dark:text-purple-400">4</span>
               </div>
-              <h3 className="text-lg font-semibold mb-2 text-gray-900">Finishing</h3>
-              <p className="text-gray-600 text-sm">Final styling and maintenance tips for long-lasting results</p>
+              <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-white">Finishing</h3>
+              <p className="text-gray-600 dark:text-gray-300 text-sm">Final styling and maintenance tips for long-lasting results</p>
             </div>
           </div>
         </div>
 
         {/* FAQ Section */}
-        <div className="bg-white rounded-lg shadow-lg p-8">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">Frequently Asked Questions</h2>
+        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 border border-gray-100 dark:border-gray-700 transition-colors">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white text-center mb-8">Frequently Asked Questions</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-lg font-semibold mb-2 text-purple-600">How long do braids typically last?</h3>
-              <p className="text-gray-600 mb-4">Most protective styles last 4-8 weeks depending on hair type, maintenance, and style choice.</p>
+              <h3 className="text-lg font-semibold mb-2 text-purple-600 dark:text-purple-400">How long do braids typically last?</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-4">Most protective styles last 4-8 weeks depending on hair type, maintenance, and style choice.</p>
               
-              <h3 className="text-lg font-semibold mb-2 text-purple-600">Do I need to bring my own hair extensions?</h3>
-              <p className="text-gray-600 mb-4">You can bring your own or we can provide high-quality extensions for an additional cost.</p>
+              <h3 className="text-lg font-semibold mb-2 text-purple-600 dark:text-purple-400">Do I need to bring my own hair extensions?</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-4">You can bring your own or we can provide high-quality extensions for an additional cost.</p>
               
-              <h3 className="text-lg font-semibold mb-2 text-purple-600">How should I prepare my hair?</h3>
-              <p className="text-gray-600 mb-4">Come with clean, detangled hair. We recommend washing 1-2 days before your appointment.</p>
+              <h3 className="text-lg font-semibold mb-2 text-purple-600 dark:text-purple-400">How should I prepare my hair?</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-4">Come with clean, detangled hair. We recommend washing 1-2 days before your appointment.</p>
             </div>
             
             <div>
-              <h3 className="text-lg font-semibold mb-2 text-purple-600">Can I wash my hair with braids?</h3>
-              <p className="text-gray-600 mb-4">Yes! We&apos;ll show you proper washing techniques to maintain your braids and scalp health.</p>
+              <h3 className="text-lg font-semibold mb-2 text-purple-600 dark:text-purple-400">Can I wash my hair with braids?</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-4">Yes! We&apos;ll show you proper washing techniques to maintain your braids and scalp health.</p>
               
-              <h3 className="text-lg font-semibold mb-2 text-purple-600">What if I need to cancel my appointment?</h3>
-              <p className="text-gray-600 mb-4">We require 48-hour notice for cancellations to avoid a cancellation fee.</p>
+              <h3 className="text-lg font-semibold mb-2 text-purple-600 dark:text-purple-400">What if I need to cancel my appointment?</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-4">We require 48-hour notice for cancellations to avoid a cancellation fee.</p>
               
-              <h3 className="text-lg font-semibold mb-2 text-purple-600">Do you offer touch-up services?</h3>
-              <p className="text-gray-600 mb-4">Yes, we offer maintenance services to refresh edges and fix any loose braids.</p>
+              <h3 className="text-lg font-semibold mb-2 text-purple-600 dark:text-purple-400">Do you offer touch-up services?</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-4">Yes, we offer maintenance services to refresh edges and fix any loose braids.</p>
             </div>
           </div>
         </div>
 
         {/* CTA Section */}
         <div className="text-center mt-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Get Started?</h2>
-          <p className="text-xl text-gray-600 mb-8">Book your appointment today and let us create the perfect braided style for you!</p>
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Ready to Get Started?</h2>
+          <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">Book your appointment today and let us create the perfect braided style for you!</p>
           <div className="flex gap-4 justify-center flex-col sm:flex-row">
             <Link
               href="/booking"
@@ -198,7 +198,7 @@ export default function Services() {
             </Link>
             <Link
               href="/contact"
-              className="border border-purple-600 text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors"
+              className="border border-purple-600 dark:border-purple-400 text-purple-600 dark:text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 dark:hover:bg-purple-900/30 transition-colors"
             >
               Ask Questions
             </Link>

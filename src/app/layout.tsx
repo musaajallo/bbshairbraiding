@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import WhatsAppFloat from "../components/WhatsAppFloat";
 import StructuredData from "../components/StructuredData";
+import { ThemeProvider } from "../components/ThemeProvider";
+import DebugTheme from "../components/DebugTheme";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -71,20 +73,26 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <StructuredData />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <a href="#main-content" className="skip-link">
-          Skip to main content
-        </a>
-        <div id="main-content">
-          {children}
-        </div>
-        <WhatsAppFloat />
+        <ThemeProvider
+          defaultTheme="light"
+          storageKey="bbs-hair-braiding-theme"
+        >
+          <a href="#main-content" className="skip-link">
+            Skip to main content
+          </a>
+          <div id="main-content">
+            {children}
+          </div>
+          <WhatsAppFloat />
+          <DebugTheme />
+        </ThemeProvider>
       </body>
     </html>
   );

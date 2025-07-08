@@ -74,16 +74,16 @@ export default function Gallery() {
     : galleryItems.filter(item => item.category === activeCategory);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-50 to-purple-50">
+    <div className="min-h-screen bg-gradient-to-br from-pink-50 to-purple-50 dark:from-gray-900 dark:to-gray-800 transition-colors">
       <Navigation />
 
       {/* Gallery Header */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Our <span className="text-purple-600">Gallery</span>
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+            Our <span className="text-purple-600 dark:text-purple-400">Gallery</span>
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             Explore our portfolio of beautiful braiding work. Get inspired for your next hairstyle!
           </p>
         </div>
@@ -97,7 +97,7 @@ export default function Gallery() {
               className={`px-4 py-2 rounded-lg font-medium transition-colors border ${
                 activeCategory === category
                   ? "bg-purple-600 text-white border-purple-600"
-                  : "bg-white text-gray-700 hover:bg-purple-100 hover:text-purple-600 border-gray-200"
+                  : "bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30 hover:text-purple-600 dark:hover:text-purple-400 border-gray-200 dark:border-gray-600"
               }`}
             >
               {category}
@@ -108,34 +108,34 @@ export default function Gallery() {
         {/* Gallery Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {filteredItems.map((item) => (
-            <div key={item.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+            <div key={item.id} className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-gray-100 dark:border-gray-700">
               {/* Placeholder for image */}
-              <div className="h-64 bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center">
+              <div className="h-64 bg-gradient-to-br from-purple-100 to-pink-100 dark:from-purple-900/30 dark:to-pink-900/30 flex items-center justify-center">
                 <div className="text-center">
-                  <svg className="w-16 h-16 text-purple-300 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-16 h-16 text-purple-300 dark:text-purple-600 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                   </svg>
-                  <p className="text-purple-400 font-medium">{item.title}</p>
+                  <p className="text-purple-400 dark:text-purple-500 font-medium">{item.title}</p>
                 </div>
               </div>
               
               <div className="p-6">
                 <div className="flex items-center justify-between mb-2">
-                  <h3 className="text-lg font-semibold text-gray-900">{item.title}</h3>
-                  <span className="text-sm bg-purple-100 text-purple-600 px-2 py-1 rounded">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{item.title}</h3>
+                  <span className="text-sm bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 px-2 py-1 rounded">
                     {item.category}
                   </span>
                 </div>
-                <p className="text-gray-600 text-sm">{item.description}</p>
+                <p className="text-gray-600 dark:text-gray-300 text-sm">{item.description}</p>
               </div>
             </div>
           ))}
         </div>
 
         {/* Instagram Section */}
-        <div className="bg-white rounded-lg shadow-lg p-8 text-center mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Follow Us on Instagram</h2>
-          <p className="text-xl text-gray-600 mb-6">
+        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 text-center mb-16 border border-gray-100 dark:border-gray-700 transition-colors">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Follow Us on Instagram</h2>
+          <p className="text-xl text-gray-600 dark:text-gray-300 mb-6">
             See our latest work and hair inspiration on Instagram @bbshairbraiding
           </p>
           <div className="flex justify-center space-x-4">
@@ -145,15 +145,15 @@ export default function Gallery() {
             >
               Follow on Instagram
             </a>
-            <button className="border border-purple-600 text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
+            <button className="border border-purple-600 dark:border-purple-400 text-purple-600 dark:text-purple-400 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50 dark:hover:bg-purple-900/30 transition-colors">
               Share Your Look
             </button>
           </div>
         </div>
 
         {/* Testimonials */}
-        <div className="bg-white rounded-lg shadow-lg p-8">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">What Our Clients Say</h2>
+        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 border border-gray-100 dark:border-gray-700 transition-colors">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white text-center mb-8">What Our Clients Say</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="mb-4">
@@ -164,8 +164,8 @@ export default function Gallery() {
                     </svg>
                   ))}
                 </div>
-                <p className="text-gray-600 italic">&quot;Amazing work! My box braids lasted 6 weeks and looked perfect the entire time.&quot;</p>
-                <p className="font-semibold text-gray-900 mt-2">- Sarah M.</p>
+                <p className="text-gray-600 dark:text-gray-300 italic">&quot;Amazing work! My box braids lasted 6 weeks and looked perfect the entire time.&quot;</p>
+                <p className="font-semibold text-gray-900 dark:text-white mt-2">- Sarah M.</p>
               </div>
             </div>
             
@@ -178,8 +178,8 @@ export default function Gallery() {
                     </svg>
                   ))}
                 </div>
-                <p className="text-gray-600 italic">&quot;Professional service and beautiful results. The custom design exceeded my expectations!&quot;</p>
-                <p className="font-semibold text-gray-900 mt-2">- Maya T.</p>
+                <p className="text-gray-600 dark:text-gray-300 italic">&quot;Professional service and beautiful results. The custom design exceeded my expectations!&quot;</p>
+                <p className="font-semibold text-gray-900 dark:text-white mt-2">- Maya T.</p>
               </div>
             </div>
             
@@ -192,8 +192,8 @@ export default function Gallery() {
                     </svg>
                   ))}
                 </div>
-                <p className="text-gray-600 italic">&quot;Clean salon, friendly staff, and incredible braiding skills. Highly recommend!&quot;</p>
-                <p className="font-semibold text-gray-900 mt-2">- Keisha J.</p>
+                <p className="text-gray-600 dark:text-gray-300 italic">&quot;Clean salon, friendly staff, and incredible braiding skills. Highly recommend!&quot;</p>
+                <p className="font-semibold text-gray-900 dark:text-white mt-2">- Keisha J.</p>
               </div>
             </div>
           </div>
@@ -201,8 +201,8 @@ export default function Gallery() {
 
         {/* CTA Section */}
         <div className="text-center mt-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready for Your Next Look?</h2>
-          <p className="text-xl text-gray-600 mb-8">Book your appointment and let&apos;s create something beautiful together!</p>
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Ready for Your Next Look?</h2>
+          <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">Book your appointment and let&apos;s create something beautiful together!</p>
           <Link
             href="/booking"
             className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors inline-block"

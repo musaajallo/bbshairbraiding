@@ -6,7 +6,7 @@ import Navigation from "../../components/Navigation";
 
 export default function About() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-50 to-purple-50">
+    <div className="min-h-screen bg-gradient-to-br from-pink-50 to-purple-50 dark:from-gray-900 dark:to-gray-800 transition-colors">
       <Navigation />
 
       {/* Hero Section */}
@@ -24,8 +24,8 @@ export default function About() {
         <div className="mb-20">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Our Story</h2>
-              <div className="space-y-4 text-gray-600 text-lg">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">Our Story</h2>
+              <div className="space-y-4 text-gray-600 dark:text-gray-300 text-lg">
                 <p>
                   BBS Hair Braiding was founded in 2013 with a simple yet powerful mission: to celebrate the beauty and cultural significance of African hair braiding while providing exceptional service to our community.
                 </p>
@@ -40,24 +40,24 @@ export default function About() {
                 </p>
               </div>
             </div>
-            <div className="bg-white p-8 rounded-lg shadow-lg">
+            <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg border border-gray-100 dark:border-gray-700 transition-colors">
               <div className="text-center">
-                <div className="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <svg className="w-10 h-10 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-20 h-20 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <svg className="w-10 h-10 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">12+ Years</h3>
-                <p className="text-gray-600 mb-6">Of dedicated service to our community</p>
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">12+ Years</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-6">Of dedicated service to our community</p>
                 
                 <div className="grid grid-cols-2 gap-4 text-center">
-                  <div className="p-4 bg-purple-50 rounded-lg">
-                    <div className="text-2xl font-bold text-purple-600">5000+</div>
-                    <div className="text-sm text-gray-600">Happy Clients</div>
+                  <div className="p-4 bg-purple-50 dark:bg-purple-900/30 rounded-lg">
+                    <div className="text-2xl font-bold text-purple-600 dark:text-purple-400">5000+</div>
+                    <div className="text-sm text-gray-600 dark:text-gray-400">Happy Clients</div>
                   </div>
-                  <div className="p-4 bg-pink-50 rounded-lg">
-                    <div className="text-2xl font-bold text-pink-600">15+</div>
-                    <div className="text-sm text-gray-600">Braid Styles</div>
+                  <div className="p-4 bg-pink-50 dark:bg-pink-900/30 rounded-lg">
+                    <div className="text-2xl font-bold text-pink-600 dark:text-pink-400">15+</div>
+                    <div className="text-sm text-gray-600 dark:text-gray-400">Braid Styles</div>
                   </div>
                 </div>
               </div>
@@ -67,20 +67,20 @@ export default function About() {
 
         {/* Owner Profile */}
         <div className="mb-20">
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden border border-gray-100 dark:border-gray-700 transition-colors">
             <div className="grid md:grid-cols-2">
-              <div className="bg-gradient-to-br from-purple-100 to-pink-100 p-8 flex items-center justify-center">
+              <div className="bg-gradient-to-br from-purple-100 to-pink-100 dark:from-purple-900/30 dark:to-pink-900/30 p-8 flex items-center justify-center">
                 <div className="text-center">
                   <div className="w-32 h-32 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white text-4xl font-bold">BS</span>
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Beatrice Simmons</h3>
-                  <p className="text-purple-600 font-semibold">Founder & Master Braider</p>
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Beatrice Simmons</h3>
+                  <p className="text-purple-600 dark:text-purple-400 font-semibold">Founder & Master Braider</p>
                 </div>
               </div>
               <div className="p-8">
-                <h3 className="text-3xl font-bold text-gray-900 mb-6">Meet Our Founder</h3>
-                <div className="space-y-4 text-gray-600">
+                <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">Meet Our Founder</h3>
+                <div className="space-y-4 text-gray-600 dark:text-gray-300">
                   <p>
                     Beatrice Simmons is the heart and soul behind BBS Hair Braiding. With over 15 years of experience in the art of hair braiding, Beatrice has dedicated her life to mastering traditional African braiding techniques while innovating with contemporary styles.
                   </p>
@@ -96,13 +96,13 @@ export default function About() {
                 </div>
                 
                 <div className="mt-6 grid grid-cols-2 gap-4">
-                  <div className="text-center p-4 bg-purple-50 rounded-lg">
-                    <div className="text-xl font-bold text-purple-600">15+</div>
-                    <div className="text-sm text-gray-600">Years Experience</div>
+                  <div className="text-center p-4 bg-purple-50 dark:bg-purple-900/30 rounded-lg">
+                    <div className="text-xl font-bold text-purple-600 dark:text-purple-400">15+</div>
+                    <div className="text-sm text-gray-600 dark:text-gray-400">Years Experience</div>
                   </div>
-                  <div className="text-center p-4 bg-pink-50 rounded-lg">
-                    <div className="text-xl font-bold text-pink-600">Certified</div>
-                    <div className="text-sm text-gray-600">Cosmetologist</div>
+                  <div className="text-center p-4 bg-pink-50 dark:bg-pink-900/30 rounded-lg">
+                    <div className="text-xl font-bold text-pink-600 dark:text-pink-400">Certified</div>
+                    <div className="text-sm text-gray-600 dark:text-gray-400">Cosmetologist</div>
                   </div>
                 </div>
               </div>
@@ -112,36 +112,36 @@ export default function About() {
 
         {/* Mission & Values */}
         <div className="mb-20">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-12">Our Mission & Values</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white text-center mb-12">Our Mission & Values</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-6 bg-white rounded-lg shadow-lg">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="text-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-100 dark:border-gray-700 transition-colors">
+              <div className="w-16 h-16 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-4 text-gray-900">Quality & Excellence</h3>
-              <p className="text-gray-600">We are committed to delivering the highest quality braiding services, using premium products and proven techniques that ensure lasting, beautiful results.</p>
+              <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Quality & Excellence</h3>
+              <p className="text-gray-600 dark:text-gray-300">We are committed to delivering the highest quality braiding services, using premium products and proven techniques that ensure lasting, beautiful results.</p>
             </div>
             
-            <div className="text-center p-6 bg-white rounded-lg shadow-lg">
-              <div className="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="text-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-100 dark:border-gray-700 transition-colors">
+              <div className="w-16 h-16 bg-pink-100 dark:bg-pink-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-pink-600 dark:text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-4 text-gray-900">Cultural Heritage</h3>
-              <p className="text-gray-600">We honor and celebrate the rich cultural traditions of African hair braiding while making these beautiful styles accessible to everyone.</p>
+              <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Cultural Heritage</h3>
+              <p className="text-gray-600 dark:text-gray-300">We honor and celebrate the rich cultural traditions of African hair braiding while making these beautiful styles accessible to everyone.</p>
             </div>
             
-            <div className="text-center p-6 bg-white rounded-lg shadow-lg">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="text-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-100 dark:border-gray-700 transition-colors">
+              <div className="w-16 h-16 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-4 text-gray-900">Hair Health</h3>
-              <p className="text-gray-600">Our protective styling techniques promote healthy hair growth while keeping your natural hair safe from damage and environmental stress.</p>
+              <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Hair Health</h3>
+              <p className="text-gray-600 dark:text-gray-300">Our protective styling techniques promote healthy hair growth while keeping your natural hair safe from damage and environmental stress.</p>
             </div>
           </div>
         </div>

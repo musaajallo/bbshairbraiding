@@ -49,8 +49,7 @@ export function ThemeProvider({
 
   useEffect(() => {
     if (!mounted) return;
-
-    const root = window.document.documentElement;
+    const root = window.document.body;
     root.classList.remove("light", "dark");
     root.classList.add(effectiveTheme);
   }, [effectiveTheme, mounted]);

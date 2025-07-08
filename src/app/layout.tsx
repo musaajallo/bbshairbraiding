@@ -4,7 +4,6 @@ import "./globals.css";
 import WhatsAppFloat from "../components/WhatsAppFloat";
 import StructuredData from "../components/StructuredData";
 import { ThemeProvider } from "../components/ThemeProvider";
-import DebugTheme from "../components/DebugTheme";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -73,11 +72,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html suppressHydrationWarning>
       <head>
         <StructuredData />
       </head>
       <body
+        lang="en"
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ThemeProvider
@@ -91,7 +91,6 @@ export default function RootLayout({
             {children}
           </div>
           <WhatsAppFloat />
-          <DebugTheme />
         </ThemeProvider>
       </body>
     </html>

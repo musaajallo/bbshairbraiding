@@ -4,6 +4,7 @@ import "./globals.css";
 import WhatsAppFloat from "../components/WhatsAppFloat";
 import StructuredData from "../components/StructuredData";
 import { ThemeProvider } from "../components/ThemeProvider";
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -91,6 +92,7 @@ export default function RootLayout({
             {children}
           </div>
           <WhatsAppFloat />
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>

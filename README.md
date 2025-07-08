@@ -5,12 +5,14 @@ A professional, production-ready website for BBS Hair Braiding built with Next.j
 ## Features
 
 ### 🎨 Professional Design
+
 - Modern, responsive design optimized for all devices
 - Beautiful gradient color scheme with purple and pink branding
 - Consistent navigation and footer across all pages
 - Accessible design with proper focus indicators and ARIA labels
 
 ### 📱 Pages Included
+
 - **Homepage** - Hero slider, services preview, testimonials, special offers
 - **About** - Company history, owner profile (Beatrice Simmons), mission & values
 - **Services** - Detailed service listings with pricing and descriptions
@@ -19,6 +21,7 @@ A professional, production-ready website for BBS Hair Braiding built with Next.j
 - **Contact** - Contact form with business information and social links
 
 ### 🔧 Technical Features
+
 - **SEO Optimized** - Meta tags, Open Graph, Twitter Cards, sitemap.xml, robots.txt
 - **Form Validation** - Real-time validation with error handling and success messages
 - **Loading States** - Loading spinners and feedback for better UX
@@ -27,6 +30,7 @@ A professional, production-ready website for BBS Hair Braiding built with Next.j
 - **Mobile First** - Responsive design with mobile hamburger menu
 
 ### 🚀 Production Ready
+
 - **Schema.org** structured data for better search engine understanding
 - **WhatsApp Integration** - Floating WhatsApp button for instant communication
 - **Social Media Links** - Facebook, Instagram, WhatsApp integration
@@ -37,6 +41,7 @@ A professional, production-ready website for BBS Hair Braiding built with Next.j
 ## Quick Start
 
 ### Prerequisites
+
 - Node.js 18+ and npm
 - Git
 
@@ -44,7 +49,7 @@ A professional, production-ready website for BBS Hair Braiding built with Next.j
 
 1. **Clone the repository**
    \`\`\`bash
-   git clone <repository-url>
+   git clone [repository-url]
    cd bbshairbraiding
    \`\`\`
 
@@ -76,7 +81,7 @@ A professional, production-ready website for BBS Hair Braiding built with Next.j
 
 2. **Configure Environment Variables**
    In Vercel dashboard, add these environment variables:
-   - \`NEXT_PUBLIC_SITE_URL\` - Your domain (e.g., https://bbshairbraiding.vercel.app)
+   - \`NEXT_PUBLIC_SITE_URL\` - Your domain (e.g., <https://bbshairbraiding.vercel.app>)
    - \`NEXT_PUBLIC_PHONE\` - Business phone number
    - \`NEXT_PUBLIC_EMAIL\` - Business email
    - \`NEXT_PUBLIC_ADDRESS\` - Business address
@@ -89,16 +94,20 @@ A professional, production-ready website for BBS Hair Braiding built with Next.j
 ### Build for Production
 
 \`\`\`bash
-# Create production build
+
+### Create production build
+
 npm run build
 
-# Start production server locally
+## Start production server locally
+
 npm start
 \`\`\`
 
 ## Customization
 
 ### Business Information
+
 Update the following files with your business information:
 
 1. **Contact Details** - Edit environment variables in \`.env.local\`
@@ -108,11 +117,14 @@ Update the following files with your business information:
 5. **Testimonials** - Modify testimonials in \`src/app/page.tsx\`
 
 ### Styling
+
 - Colors and styling are in \`src/app/globals.css\` and Tailwind classes
 - Component styles can be updated in individual page/component files
 
 ### Content Management
+
 Consider integrating with a CMS like:
+
 - Sanity.io for content management
 - Contentful for structured content
 - Strapi for headless CMS
@@ -120,22 +132,26 @@ Consider integrating with a CMS like:
 ## Integrations Ready For
 
 ### Email Services
+
 - Newsletter signup form ready for services like:
   - Mailchimp
   - ConvertKit  
   - EmailJS
 
 ### Analytics
+
 - Google Analytics 4 ready (add measurement ID to environment variables)
 - Google Tag Manager compatible
 
 ### Form Handling
+
 - Contact and booking forms ready for:
   - Formspree
   - Netlify Forms
   - Custom API endpoints
 
 ### Payment Processing (Future)
+
 - Stripe integration ready for online payments
 - PayPal integration possible
 
@@ -196,6 +212,7 @@ src/
 ## Support
 
 For support with this template:
+
 - Check the [Next.js documentation](https://nextjs.org/docs)
 - Review [Tailwind CSS documentation](https://tailwindcss.com/docs)
 - Consult [Vercel deployment guides](https://vercel.com/docs)
@@ -206,4 +223,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ---
 
-**Built with ❤️ using Next.js 15, TypeScript, and Tailwind CSS**
+### Built with ❤️ using Next.js 15, TypeScript, and Tailwind CSS

@@ -3,6 +3,16 @@ import { authOptions } from "@/lib/auth";
 import Link from "next/link";
 import { prisma } from "@/lib/prisma";
 
+type Contact = {
+  id: string;
+  email: string;
+  phone: string;
+  address: string;
+  mapUrl?: string | null;
+  createdAt: Date;
+  // Add other fields if needed
+};
+
 export default async function AdminContactPage() {
   const session = await getServerSession(authOptions);
   if (!session || session.user?.role !== "admin") {
@@ -15,7 +25,7 @@ export default async function AdminContactPage() {
     );
   }
 
-  const contacts = await prisma.contact.findMany({ orderBy: { createdAt: "desc" } });
+  const contacts: Contact[] = await prisma.contact.findMany({ orderBy: { createdAt: "desc" } });
 
   return (
     <div className="max-w-3xl mx-auto mt-20 p-6 bg-white dark:bg-gray-900 rounded shadow">
